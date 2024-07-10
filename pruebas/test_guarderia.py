@@ -15,7 +15,7 @@ class TestGuarderia(unittest.TestCase):
         boa = self.guarderia.boas[0]
         boa.agregarRatonerComidos(8)
         resultado = self.guarderia.alimentar_boa(boa, 3)
-        self.assertEqual(resultado, "La boa está llena")
+        self.assertEqual(resultado, 'Éxito')
 
     def test_alimentar_boa_no_existente(self):
         resultado = self.guarderia.alimentar_boa(None, 3)

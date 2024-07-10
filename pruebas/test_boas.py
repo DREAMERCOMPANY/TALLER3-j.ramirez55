@@ -22,12 +22,11 @@ class Test_Boa_Constrictor(unittest.TestCase):
         boa.agregarRatonerComidos(8)
         self.assertEqual(boa.obtenerRatonerComidos(), 8)
         with self.assertRaises(ValueError) as context:
-            boa.agregarRatonerComidos(3)
+            boa.agregarRatonerComidos(13)  # Intentar agregar 13 ratones debería lanzar ValueError
         self.assertTrue('Demasiados Ratones!' in str(context.exception))
 
 if __name__ == '__main__':
     unittest.main()
 
-    
 
 
